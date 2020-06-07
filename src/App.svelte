@@ -1,10 +1,8 @@
 <script>
-	import Main from './layout/main.svelte'
+	import Home from './pages/home.svelte'
 </script>
 
-<Main>
-
-</Main>
+<Home></Home>
 
 <style>
 	
