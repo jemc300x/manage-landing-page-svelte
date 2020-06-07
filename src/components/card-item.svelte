@@ -1,7 +1,9 @@
 <script>
-  export let number=''
-  export let title=''
-  export let content=''
+  
+  export let number = ''
+  export let title = ''
+  export let content = ''
+
 </script>
 
 <div class="card-item">

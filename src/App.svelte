@@ -1,8 +1,12 @@
 <script>
-	import Home from './pages/home.svelte'
+  import Router from 'svelte-spa-router'
+	import MainLayout from './layout/main-layout.svelte'
+  import routes from './router.js'
 </script>
 
-<Home></Home>
+<MainLayout>
+  <Router {routes}/>
+</MainLayout>
 
 <style>
 	

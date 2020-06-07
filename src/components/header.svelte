@@ -1,19 +1,29 @@
 <script>
+  import { link } from 'svelte-spa-router'
+
+  let showMenu = false;
+
+  function handleClick(){
+    showMenu = false;
+  }
+
 </script>
 
-<input type="checkbox" name="menu" id="menu">
+<input type="checkbox" name="menu" id="menu" bind:checked={showMenu}>
 <section class="header">
   <div class="navbar">
-    <img src="../assets/img/logo.svg" alt="" class="header-logo">
+    <a href="/" use:link>
+      <img src="../assets/img/logo.svg" alt="" class="header-logo">
+    </a>
     <label for="menu" class="menu-icon"></label>
   </div>
   <div class="menu-container">
     <ul class="menu-items">
-      <li><a href="/">Pricing</a></li>  
-      <li><a href="/">Product</a></li>  
-      <li><a href="/">About Us</a></li>  
-      <li><a href="/">Careers</a></li>  
-      <li><a href="/">Community</a></li>  
+      <li><a href="/pricing" use:link on:click={handleClick}>Pricing</a></li>  
+      <li><a href="/product" use:link on:click={handleClick}>Product</a></li>  
+      <li><a href="/about-us" use:link on:click={handleClick}>About Us</a></li>  
+      <li><a href="/careers" use:link on:click={handleClick}>Careers</a></li>  
+      <li><a href="/community" use:link on:click={handleClick}>Community</a></li>  
     </ul>
   </div>
   <div class="btn-header">
@@ -22,6 +32,10 @@
 </section>
 
 <style>
+.hide{
+  display: none;
+}
+
 .btn-header{
   display: none;
 }
@@ -98,20 +112,11 @@
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-#menu:checked ~ .hero{
-  padding-top: 140px;
-}
-
 #menu:checked ~ * .menu-icon{
   background-image: url(../assets/img/icon-close.svg);
 }
 
 @media(min-width: 768px){
-  body{
-    background-size: initial;
-    background-position: 120% -150px, -535px 1080px;
-  }
-
   .header{
     display: grid;
     grid-template-areas: "logo menu button";

@@ -369,7 +369,6 @@ template {
 
   /* Font Family */
   --font-family: 'Be Vietnam', sans-serif;
-
 }
 
 .hide{
@@ -420,6 +419,13 @@ body{
 .paragraph{
   color: var(--Dark-Grayish-Blue);
   line-height: 30px;
+}
+
+@media(min-width: 768px){
+  body{
+    background-size: initial;
+    background-position: 120% -150px, -535px 1080px;
+  }
 }
 
 /* End Globals */
