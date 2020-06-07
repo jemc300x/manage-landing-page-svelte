@@ -32,7 +32,7 @@
 .carousel-item__body{
   background-color: var(--Vary-Light-Gray);
   padding: 60px 10px;
-  height: 60%;
+  height: 50%;
 }
 
 .carousel-item__body h4{

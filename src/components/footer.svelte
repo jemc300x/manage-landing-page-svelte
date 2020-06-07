@@ -1,11 +1,33 @@
 <script>
+
+
+let inputText = '';
+let showMessageError = false;
+
+function handleClick(){
+  if(!inputText){
+    console.log(inputText);
+    showMessageError=true;
+    return;
+  }
+
+  let emailReg = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
+
+  if (!emailReg.test(inputText)) {
+    showMessageError = true
+  } else {
+    showMessageError = false
+  }
+}
 </script>
 
 <section class="footer">
   <form class="form">
-    <input type="email" id="input" placeholder="Updates in your inbox..." />
-    <button type="button" id="submit" class="btn orange">GO</button>
-    <p id="message-error">Please insert a valid email</p>
+    <input type="email" id="input" bind:value={inputText} placeholder="Updates in your inbox..." />
+    <button type="button" id="submit" class="btn orange" on:click|once={handleClick}>GO</button>
+    {#if showMessageError}
+      <p id="message-error">Please insert a valid email</p>
+    {/if}
   </form>
   <div class="menu">
     <ul class="menu-column">
@@ -69,7 +91,6 @@
 }
 
 .form p{
-  display: none;
   color: var(--Bright-Red);
   font-size: .8rem;
   font-style: italic;
