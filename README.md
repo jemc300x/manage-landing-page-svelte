@@ -1,10 +1,10 @@
 # Manage Landing Page!
 
-Challenge of Frontend Mentor converted to **SVELTE**.
+Challenge of Frontend Mentor converted to **[Svelte](https://svelte.dev)**.
 
 ![Fylo Landing Page](https://repository-images.githubusercontent.com/270149088/72224800-a82f-11ea-9c01-6f6473680623)
 
-Version HTML y CSS [](https://github.com/jemc300x/manage-landing-page-html)
+Version HTML y CSS https://github.com/jemc300x/manage-landing-page-html
 
 ---
 
