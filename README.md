@@ -1,4 +1,10 @@
-*Looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
+# Manage Landing Page!
+
+Challenge of Frontend Mentor converted to **SVELTE**.
+
+![Fylo Landing Page](https://repository-images.githubusercontent.com/270149088/72224800-a82f-11ea-9c01-6f6473680623)
+
+Version HTML y CSS [](https://github.com/jemc300x/manage-landing-page-html)
 
 ---
 
